@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=LLaMA1B_Inference
+#SBATCH --job-name=LLaMA8B_Inference
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:1
 #SBATCH --constraint=a100
