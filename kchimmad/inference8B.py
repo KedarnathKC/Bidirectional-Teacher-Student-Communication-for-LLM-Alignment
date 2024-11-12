@@ -27,9 +27,9 @@ data_train = load_from_disk("../datasets/gsm8k/train/")
 
 # Loading model
 hf_token = os.getenv("hf_token")
-model_name = "meta-llama/Llama-3.2-1B-Instruct"
+# model_name = "meta-llama/Llama-3.2-1B-Instruct"
 # model_name = "meta-llama/Llama-3.2-3B-Instruct"
-# model_name = 'meta-llama/Llama-3.1-8B-Instruct'
+model_name = 'meta-llama/Llama-3.1-8B-Instruct'
 config = AutoConfig.from_pretrained(model_name, token=hf_token)
 tokenizer = AutoTokenizer.from_pretrained(model_name, token=hf_token, config=config,cache_dir='../transformers_cache')
 model = AutoModelForCausalLM.from_pretrained(model_name, token=hf_token, config=config,cache_dir='../transformers_cache')
@@ -79,7 +79,7 @@ for i in tqdm(range(0, len(data_test["question"]), batch_size), desc="Processing
         generated_outputs.append({"input": inputs[j], "output": generated_text, "question": batch_questions[j], "answer":answer})
         # generated_outputs.append({"input": inputs[j], "output": generated_text})
 
-with open("../outputs/gsm8k/LLaMA1B/generated_outputs_test_new_prompt.json", "w") as f:
+with open("../outputs/gsm8k/LLaMA8B/generated_outputs_test_new_prompt.json", "w") as f:
     json.dump(generated_outputs, f, indent=4)
 
     
