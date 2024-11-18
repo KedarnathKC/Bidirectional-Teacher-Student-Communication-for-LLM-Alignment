@@ -70,7 +70,8 @@ for i in tqdm(range(0, len(data_test["question"]), batch_size), desc="Processing
     tokenized_inputs.to(device)
 
     with torch.no_grad():
-        output = model.generate(**tokenized_inputs, max_length=2000, num_return_sequences=1, pad_token_id=tokenizer.pad_token_id, do_sample=True, temperature=0.1, top_p=0.95)
+        output = model.generate(**tokenized_inputs, max_length=2000, pad_token_id=tokenizer.pad_token_id)
+        #  output = model.generate(**tokenized_inputs, max_length=2000, num_return_sequences=1, pad_token_id=tokenizer.pad_token_id, do_sample=True, temperature=0.1, top_p=0.95)
         # output = model.generate(**tokenized_inputs, max_new_tokens=256, num_return_sequences=1, pad_token_id=tokenizer.pad_token_id, do_sample=True, temperature=0.1, top_p=0.95)
    
     for j, o in enumerate(output):
@@ -79,7 +80,7 @@ for i in tqdm(range(0, len(data_test["question"]), batch_size), desc="Processing
         generated_outputs.append({"input": inputs[j], "output": generated_text, "question": batch_questions[j], "answer":answer})
         # generated_outputs.append({"input": inputs[j], "output": generated_text})
 
-with open("../outputs/gsm8k/LLaMA3B/generated_outputs_test_new_prompt.json", "w") as f:
+with open("../outputs/gsm8k/LLaMA3B/generated_outputs_test_new_prompt_greedy.json", "w") as f:
     json.dump(generated_outputs, f, indent=4)
 
     

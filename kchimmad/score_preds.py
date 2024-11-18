@@ -10,7 +10,8 @@ def get_answer_model(row):
     return row['output'].split('####')[-1]
 
 data_test = load_from_disk("../datasets/gsm8k/test")
-model_output_path =  '../outputs/gsm8k/LLaMA8B/generated_outputs_trainfs_test.json'
+
+model_output_path =  '../outputs/gsm8k/LLaMA3B/generated_outputs_test_new_prompt_greedy.json'
 df = pd.read_json(model_output_path)
 test = pd.DataFrame(data_test)
 df['model_answer']=df.apply(get_answer_model,axis=1)
