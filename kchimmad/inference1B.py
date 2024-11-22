@@ -63,8 +63,8 @@ generated_outputs=[]
 # With vram=80G, 1B - 64, 3B - 64, 8B - 32
 batch_size=64
 
-temp = 0.4
-top_p = 0.8
+temp = 0.1
+top_p = 0.95
 
 for i in tqdm(range(0, len(data_test["question"]), batch_size), desc="Processing questions"):
     batch_questions = data_test["question"][i:i+batch_size]

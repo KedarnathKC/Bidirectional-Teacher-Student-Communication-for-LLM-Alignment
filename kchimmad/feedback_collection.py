@@ -4,6 +4,7 @@ import os
 from datasets import load_from_disk
 import pandas as pd
 from tqdm import tqdm
+import json
 
 os.environ['TRANSFORMERS_CACHE'] = '../transformers_cache/llama3.1/'
 cache_dir = '../transformers_cache/llama3.1/'
