@@ -95,8 +95,8 @@ def main():
 
     train_path = "../datasets/gsm8k/train/"
     val_path = "../datasets/gsm8k/val/"
-    # top_p = [0.95,0.9,0.85,0.8,0.75,0.7,0.65,0.6]
-    top_p = [0.65,0.6]
+    top_p = [0.95,0.9,0.85,0.8,0.75,0.7,0.65,0.6]
+    # top_p = [0.65,0.6]
     temp = [0.3,0.5,0.7,0.9,1.1,1.3,1.5,1.7,1.9]
 
     inference(model_name,train_path,val_path,top_p,temp,batch_size)
