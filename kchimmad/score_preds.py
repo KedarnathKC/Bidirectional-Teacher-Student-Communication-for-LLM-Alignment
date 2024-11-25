@@ -21,7 +21,8 @@ def get_score(data_path, output_path):
     # print(f'DF Shape: {df.shape}, Test Shape: {test.shape}')
     exact_match_metric = load("exact_match")
     
-    for i in tqdm(range(df.shape[0])):
+    # for i in tqdm(range(df.shape[0])):
+    for i in range(df.shape[0]):
         df.loc[i,'score'] = exact_match_metric.compute(predictions = [df.iloc[i]['model_answer']], references = [test.iloc[i]['GT_Answer']])['exact_match']
     
     # df.drop(columns=['model_answer'], inplace=True)

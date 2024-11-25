@@ -62,10 +62,8 @@ generated_outputs=[]
 # Adjust batch size according to your GPU memory capacity
 # With vram=80G, 1B - 64, 3B - 64, 8B - 32
 batch_size=64
-
 temp = 0.1
 top_p = 0.95
-
 for i in tqdm(range(0, len(data_test["question"]), batch_size), desc="Processing questions"):
     batch_questions = data_test["question"][i:i+batch_size]
     inputs = [fewShotPrompt+"Now, solve the below question following the instructions given above. \n\nQ: "+q+"\nA: <|eot_id|><|start_header_id|>assistant<|end_header_id|>" for q in batch_questions]
