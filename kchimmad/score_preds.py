@@ -40,8 +40,8 @@ def main():
     # data_test = load_from_disk("../datasets/gsm8k/test")
     data_path ="../datasets/gsm8k/val"
     # model_output_path =  '../outputs/gsm8k/LLaMA3B/generated_outputs_test_new_prompt_greedy.json'
-    model_output_path = '../outputs/gsm8k/LLaMA1B/generated_outputs_val_hyptune_0.3_0.95.json'
-    
+    # model_output_path = '../outputs/gsm8k/LLaMA1B/generated_outputs_val_hyptune_0.3_0.95.json'
+        
     score = get_score(data_path, model_output_path)
     print("The score of the model is: ",score)
 
