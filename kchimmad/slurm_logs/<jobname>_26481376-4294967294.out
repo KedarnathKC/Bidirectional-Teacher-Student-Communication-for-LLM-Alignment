@@ -1,0 +1,73 @@
+gpu022
+Traceback (most recent call last):
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/huggingface_hub/utils/_errors.py", line 304, in hf_raise_for_status
+    response.raise_for_status()
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct/resolve/main/config.json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1751, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1673, in get_hf_file_metadata
+    r = _request_wrapper(
+        ^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 376, in _request_wrapper
+    response = _request_wrapper(
+               ^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 400, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/huggingface_hub/utils/_errors.py", line 367, in hf_raise_for_status
+    raise HfHubHTTPError(message, response=response) from e
+huggingface_hub.utils._errors.HfHubHTTPError:  (Request ID: Root=1-674d128c-118d4578197100643f8f4b62;9afc1986-9977-4e5e-9db8-360c69dcc80a)
+
+403 Forbidden: Please enable access to public gated repositories in your fine-grained token settings to view this repository..
+Cannot access content at: https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct/resolve/main/config.json.
+If you are trying to create or update content, make sure you have a token with the `write` role.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/transformers/utils/hub.py", line 403, in cached_file
+    resolved_file = hf_hub_download(
+                    ^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1240, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1347, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1857, in _raise_on_head_call_error
+    raise LocalEntryNotFoundError(
+huggingface_hub.utils._errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/scratch/workspace/wenlongzhao_umass_edu-analyze/Bidirectional-Teacher-Student-Communication-for-LLM-Alignment/kchimmad/inference1B.py", line 33, in <module>
+    config = AutoConfig.from_pretrained(model_name, token=hf_token)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/transformers/models/auto/configuration_auto.py", line 1017, in from_pretrained
+    config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/transformers/configuration_utils.py", line 574, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/transformers/configuration_utils.py", line 633, in _get_config_dict
+    resolved_config_file = cached_file(
+                           ^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/transformers/utils/hub.py", line 446, in cached_file
+    raise EnvironmentError(
+OSError: We couldn't connect to 'https://huggingface.co' to load this file, couldn't find it in the cached files and it looks like meta-llama/Llama-3.2-1B-Instruct is not the path to a directory containing a file named config.json.
+Checkout your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.

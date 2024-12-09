@@ -3,432 +3,432 @@
         "model": "meta-llama/Llama-3.2-1B-Instruct",
         "temp": 0.3,
         "top_p": 0.95,
-        "score": 0.9076923076923077
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 0.5,
-        "top_p": 0.95,
-        "score": 0.8989966555183947
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 0.7,
-        "top_p": 0.95,
-        "score": 0.8501672240802676
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 0.9,
-        "top_p": 0.95,
-        "score": 0.7752508361204014
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.1,
-        "top_p": 0.95,
-        "score": 0.6762541806020067
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.3,
-        "top_p": 0.95,
-        "score": 0.5337792642140469
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.5,
-        "top_p": 0.95,
-        "score": 0.41270903010033444
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.7,
-        "top_p": 0.95,
-        "score": 0.3083612040133779
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.9,
-        "top_p": 0.95,
-        "score": 0.24280936454849497
+        "score": 0.27157190635451506
     },
     {
         "model": "meta-llama/Llama-3.2-1B-Instruct",
         "temp": 0.3,
         "top_p": 0.9,
-        "score": 0.9183946488294314
+        "score": 0.27224080267558526
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 0.3,
+        "top_p": 0.85,
+        "score": 0.27692307692307694
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 0.3,
+        "top_p": 0.8,
+        "score": 0.2709030100334448
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 0.3,
+        "top_p": 0.75,
+        "score": 0.2809364548494983
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 0.3,
+        "top_p": 0.7,
+        "score": 0.28160535117056856
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 0.3,
+        "top_p": 0.65,
+        "score": 0.2836120401337793
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 0.3,
+        "top_p": 0.6,
+        "score": 0.27224080267558526
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 0.5,
+        "top_p": 0.95,
+        "score": 0.262876254180602
     },
     {
         "model": "meta-llama/Llama-3.2-1B-Instruct",
         "temp": 0.5,
         "top_p": 0.9,
-        "score": 0.9003344481605351
+        "score": 0.2454849498327759
     },
     {
         "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 0.7,
-        "top_p": 0.9,
-        "score": 0.8568561872909699
+        "temp": 0.5,
+        "top_p": 0.85,
+        "score": 0.25418060200668896
     },
     {
         "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 0.9,
-        "top_p": 0.9,
-        "score": 0.7993311036789298
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.1,
-        "top_p": 0.9,
-        "score": 0.7150501672240802
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.3,
-        "top_p": 0.9,
-        "score": 0.6408026755852843
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.5,
-        "top_p": 0.9,
-        "score": 0.4735785953177257
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.7,
-        "top_p": 0.9,
-        "score": 0.36187290969899666
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.9,
-        "top_p": 0.9,
+        "temp": 0.5,
+        "top_p": 0.8,
         "score": 0.2688963210702341
     },
     {
         "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 0.3,
-        "top_p": 0.85,
-        "score": 0.9183946488294314
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 0.5,
-        "top_p": 0.85,
-        "score": 0.9103678929765886
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 0.7,
-        "top_p": 0.85,
-        "score": 0.8715719063545151
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 0.9,
-        "top_p": 0.85,
-        "score": 0.8414715719063545
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.1,
-        "top_p": 0.85,
-        "score": 0.7451505016722408
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.3,
-        "top_p": 0.85,
-        "score": 0.6608695652173913
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.5,
-        "top_p": 0.85,
-        "score": 0.5531772575250836
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.7,
-        "top_p": 0.85,
-        "score": 0.3919732441471572
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.9,
-        "top_p": 0.85,
-        "score": 0.3130434782608696
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 0.3,
-        "top_p": 0.8,
-        "score": 0.9224080267558529
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 0.5,
-        "top_p": 0.8,
-        "score": 0.9157190635451505
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 0.7,
-        "top_p": 0.8,
-        "score": 0.8869565217391304
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 0.9,
-        "top_p": 0.8,
-        "score": 0.8394648829431438
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.1,
-        "top_p": 0.8,
-        "score": 0.7712374581939799
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.3,
-        "top_p": 0.8,
-        "score": 0.6882943143812709
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.5,
-        "top_p": 0.8,
-        "score": 0.5939799331103679
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.7,
-        "top_p": 0.8,
-        "score": 0.4688963210702341
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.9,
-        "top_p": 0.8,
-        "score": 0.3558528428093645
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 0.3,
-        "top_p": 0.75,
-        "score": 0.9210702341137124
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
         "temp": 0.5,
         "top_p": 0.75,
-        "score": 0.9137123745819398
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 0.7,
-        "top_p": 0.75,
-        "score": 0.9063545150501672
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 0.9,
-        "top_p": 0.75,
-        "score": 0.854180602006689
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.1,
-        "top_p": 0.75,
-        "score": 0.7919732441471572
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.3,
-        "top_p": 0.75,
-        "score": 0.7311036789297659
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.5,
-        "top_p": 0.75,
-        "score": 0.6073578595317726
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.7,
-        "top_p": 0.75,
-        "score": 0.5264214046822743
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.9,
-        "top_p": 0.75,
-        "score": 0.40735785953177256
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 0.3,
-        "top_p": 0.7,
-        "score": 0.9217391304347826
+        "score": 0.26755852842809363
     },
     {
         "model": "meta-llama/Llama-3.2-1B-Instruct",
         "temp": 0.5,
         "top_p": 0.7,
-        "score": 0.9103678929765886
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 0.7,
-        "top_p": 0.7,
-        "score": 0.9003344481605351
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 0.9,
-        "top_p": 0.7,
-        "score": 0.8668896321070234
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.1,
-        "top_p": 0.7,
-        "score": 0.8147157190635451
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.3,
-        "top_p": 0.7,
-        "score": 0.7678929765886288
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.5,
-        "top_p": 0.7,
-        "score": 0.711705685618729
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.7,
-        "top_p": 0.7,
-        "score": 0.5779264214046823
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.9,
-        "top_p": 0.7,
-        "score": 0.4682274247491639
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 0.3,
-        "top_p": 0.65,
-        "score": 0.9277591973244147
+        "score": 0.2729096989966555
     },
     {
         "model": "meta-llama/Llama-3.2-1B-Instruct",
         "temp": 0.5,
         "top_p": 0.65,
-        "score": 0.9157190635451505
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 0.7,
-        "top_p": 0.65,
-        "score": 0.905685618729097
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 0.9,
-        "top_p": 0.65,
-        "score": 0.8749163879598663
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.1,
-        "top_p": 0.65,
-        "score": 0.8481605351170568
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.3,
-        "top_p": 0.65,
-        "score": 0.7765886287625418
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.5,
-        "top_p": 0.65,
-        "score": 0.7157190635451505
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.7,
-        "top_p": 0.65,
-        "score": 0.6307692307692307
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 1.9,
-        "top_p": 0.65,
-        "score": 0.5210702341137123
-    },
-    {
-        "model": "meta-llama/Llama-3.2-1B-Instruct",
-        "temp": 0.3,
-        "top_p": 0.6,
-        "score": 0.9357859531772575
+        "score": 0.2909698996655518
     },
     {
         "model": "meta-llama/Llama-3.2-1B-Instruct",
         "temp": 0.5,
         "top_p": 0.6,
-        "score": 0.9217391304347826
+        "score": 0.25953177257525084
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 0.7,
+        "top_p": 0.95,
+        "score": 0.2294314381270903
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 0.7,
+        "top_p": 0.9,
+        "score": 0.23879598662207357
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 0.7,
+        "top_p": 0.85,
+        "score": 0.24414715719063546
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 0.7,
+        "top_p": 0.8,
+        "score": 0.2568561872909699
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 0.7,
+        "top_p": 0.75,
+        "score": 0.2782608695652174
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 0.7,
+        "top_p": 0.7,
+        "score": 0.2581939799331104
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 0.7,
+        "top_p": 0.65,
+        "score": 0.26688963210702343
     },
     {
         "model": "meta-llama/Llama-3.2-1B-Instruct",
         "temp": 0.7,
         "top_p": 0.6,
-        "score": 0.919732441471572
+        "score": 0.2662207357859532
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 0.9,
+        "top_p": 0.95,
+        "score": 0.18528428093645485
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 0.9,
+        "top_p": 0.9,
+        "score": 0.2020066889632107
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 0.9,
+        "top_p": 0.85,
+        "score": 0.231438127090301
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 0.9,
+        "top_p": 0.8,
+        "score": 0.231438127090301
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 0.9,
+        "top_p": 0.75,
+        "score": 0.22742474916387959
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 0.9,
+        "top_p": 0.7,
+        "score": 0.2608695652173913
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 0.9,
+        "top_p": 0.65,
+        "score": 0.26421404682274247
     },
     {
         "model": "meta-llama/Llama-3.2-1B-Instruct",
         "temp": 0.9,
         "top_p": 0.6,
-        "score": 0.8909698996655518
+        "score": 0.2608695652173913
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.1,
+        "top_p": 0.95,
+        "score": 0.13645484949832776
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.1,
+        "top_p": 0.9,
+        "score": 0.1491638795986622
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.1,
+        "top_p": 0.85,
+        "score": 0.1625418060200669
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.1,
+        "top_p": 0.8,
+        "score": 0.1939799331103679
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.1,
+        "top_p": 0.75,
+        "score": 0.2120401337792642
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.1,
+        "top_p": 0.7,
+        "score": 0.2354515050167224
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.1,
+        "top_p": 0.65,
+        "score": 0.24414715719063546
     },
     {
         "model": "meta-llama/Llama-3.2-1B-Instruct",
         "temp": 1.1,
         "top_p": 0.6,
-        "score": 0.8561872909698997
+        "score": 0.25953177257525084
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.3,
+        "top_p": 0.95,
+        "score": 0.06220735785953177
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.3,
+        "top_p": 0.9,
+        "score": 0.09230769230769231
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.3,
+        "top_p": 0.85,
+        "score": 0.13177257525083613
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.3,
+        "top_p": 0.8,
+        "score": 0.1331103678929766
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.3,
+        "top_p": 0.75,
+        "score": 0.16521739130434782
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.3,
+        "top_p": 0.7,
+        "score": 0.17525083612040135
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.3,
+        "top_p": 0.65,
+        "score": 0.19732441471571907
     },
     {
         "model": "meta-llama/Llama-3.2-1B-Instruct",
         "temp": 1.3,
         "top_p": 0.6,
-        "score": 0.8080267558528428
+        "score": 0.2214046822742475
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.5,
+        "top_p": 0.95,
+        "score": 0.0274247491638796
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.5,
+        "top_p": 0.9,
+        "score": 0.04749163879598662
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.5,
+        "top_p": 0.85,
+        "score": 0.06755852842809365
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.5,
+        "top_p": 0.8,
+        "score": 0.08896321070234113
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.5,
+        "top_p": 0.75,
+        "score": 0.11304347826086956
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.5,
+        "top_p": 0.7,
+        "score": 0.15183946488294314
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.5,
+        "top_p": 0.65,
+        "score": 0.15585284280936454
     },
     {
         "model": "meta-llama/Llama-3.2-1B-Instruct",
         "temp": 1.5,
         "top_p": 0.6,
-        "score": 0.7411371237458194
+        "score": 0.17993311036789297
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.7,
+        "top_p": 0.95,
+        "score": 0.006688963210702341
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.7,
+        "top_p": 0.9,
+        "score": 0.01471571906354515
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.7,
+        "top_p": 0.85,
+        "score": 0.025418060200668897
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.7,
+        "top_p": 0.8,
+        "score": 0.04882943143812709
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.7,
+        "top_p": 0.75,
+        "score": 0.06822742474916388
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.7,
+        "top_p": 0.7,
+        "score": 0.07491638795986622
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.7,
+        "top_p": 0.65,
+        "score": 0.10100334448160535
     },
     {
         "model": "meta-llama/Llama-3.2-1B-Instruct",
         "temp": 1.7,
         "top_p": 0.6,
-        "score": 0.6755852842809364
+        "score": 0.1351170568561873
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.9,
+        "top_p": 0.95,
+        "score": 0.002006688963210702
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.9,
+        "top_p": 0.9,
+        "score": 0.005351170568561873
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.9,
+        "top_p": 0.85,
+        "score": 0.01471571906354515
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.9,
+        "top_p": 0.8,
+        "score": 0.02140468227424749
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.9,
+        "top_p": 0.75,
+        "score": 0.020066889632107024
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.9,
+        "top_p": 0.7,
+        "score": 0.046153846153846156
+    },
+    {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "temp": 1.9,
+        "top_p": 0.65,
+        "score": 0.07558528428093646
     },
     {
         "model": "meta-llama/Llama-3.2-1B-Instruct",
         "temp": 1.9,
         "top_p": 0.6,
-        "score": 0.5745819397993311
+        "score": 0.08896321070234113
     }
 ]

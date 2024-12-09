@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=LLaMA1B_Inf
+#SBATCH --job-name=3B_Inf
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:1
 #SBATCH --constraint=a100

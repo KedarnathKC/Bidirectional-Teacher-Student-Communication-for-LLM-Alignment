@@ -5,9 +5,9 @@ import json
 from datasets import load_from_disk
 
 def get_answer_dataset(row):
-    return row['answer'].split('####')[-1]
+    return row['answer'].split('####')[-1].strip()
 def get_answer_model(row):
-    return row['output'].split('####')[-1]
+    return row['output'].split('####')[-1].strip()
 
 def get_score(data_path, output_path):
     '''
@@ -40,9 +40,9 @@ def get_score(data_path, output_path):
 
 def main():
     # data_test = load_from_disk("../datasets/gsm8k/test")
-    data_path ="../datasets/gsm8k/val"
-    # model_output_path =  '../outputs/gsm8k/LLaMA3B/generated_outputs_test_new_prompt_greedy.json'
-    model_output_path = '../outputs/gsm8k/LLaMA1B/generated_outputs_val_hyptune_0.3_0.95.json'
+    data_path ="../datasets/gsm8k/test"
+    model_output_path =  "../outputs/gsm8k/LLaMA1B/generated_outputs_test_best_hyper_param.json"
+    # model_output_path = '../outputs/gsm8k/LLaMA1B/generated_outputs_val_hyptune_0.3_0.95.json'
     
         
     score = get_score(data_path, model_output_path)

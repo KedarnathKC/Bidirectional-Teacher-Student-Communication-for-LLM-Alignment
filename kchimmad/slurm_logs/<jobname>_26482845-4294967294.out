@@ -1,0 +1,31 @@
+gpu024
+Traceback (most recent call last):
+  File "/scratch/workspace/wenlongzhao_umass_edu-analyze/Bidirectional-Teacher-Student-Communication-for-LLM-Alignment/kchimmad/inference3B.py", line 33, in <module>
+    config = AutoConfig.from_pretrained(model_name, token=hf_token)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/transformers/models/auto/configuration_auto.py", line 1017, in from_pretrained
+    config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/transformers/configuration_utils.py", line 574, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/transformers/configuration_utils.py", line 633, in _get_config_dict
+    resolved_config_file = cached_file(
+                           ^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/transformers/utils/hub.py", line 403, in cached_file
+    resolved_file = hf_hub_download(
+                    ^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1240, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1357, in _hf_hub_download_to_cache_dir
+    os.makedirs(os.path.dirname(blob_path), exist_ok=True)
+  File "<frozen os>", line 215, in makedirs
+  File "<frozen os>", line 225, in makedirs
+OSError: [Errno 122] Disk quota exceeded: '/home/kchimmad_umass_edu/.cache/huggingface/hub/models--meta-llama--Llama-3.2-3B-Instruct'
