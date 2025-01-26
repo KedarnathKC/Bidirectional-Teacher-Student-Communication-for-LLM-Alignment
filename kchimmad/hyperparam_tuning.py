@@ -51,27 +51,27 @@ def inference(model_name, data_train_path, data_eval_path, top_p, temp, batch_si
     exp_runs=[]
     for p in top_p:
         for t in temp:
-            # generated_outputs=[]
-            # for i in tqdm(range(0, len(data_test["question"]), batch_size), desc="Processing questions"):
-            #     batch_questions = data_test["question"][i:i+batch_size]
-            #     inputs = [fewShotPrompt+"Now, solve the below question following the instructions given above. \n\nQ: "+q+"\nA: <|eot_id|><|start_header_id|>assistant<|end_header_id|>" for q in batch_questions]
-            #     # inputs = [fewShotPrompt+"Now, Follow the same format for reasoning and stating your final answer as above examples and Answer the below question\n\nQ: "+q+"<|eot_id|><|start_header_id|>assistant<|end_header_id|>" for q in batch_questions]
-            #     tokenized_inputs = tokenizer(inputs, return_tensors="pt", padding=True, truncation=True)
-            #     tokenized_inputs.to(device)
+            generated_outputs=[]
+            for i in tqdm(range(0, len(data_test["question"]), batch_size), desc="Processing questions"):
+                batch_questions = data_test["question"][i:i+batch_size]
+                inputs = [fewShotPrompt+"Now, solve the below question following the instructions given above. \n\nQ: "+q+"\nA: <|eot_id|><|start_header_id|>assistant<|end_header_id|>" for q in batch_questions]
+                # inputs = [fewShotPrompt+"Now, Follow the same format for reasoning and stating your final answer as above examples and Answer the below question\n\nQ: "+q+"<|eot_id|><|start_header_id|>assistant<|end_header_id|>" for q in batch_questions]
+                tokenized_inputs = tokenizer(inputs, return_tensors="pt", padding=True, truncation=True)
+                tokenized_inputs.to(device)
 
-            #     with torch.no_grad():
-            #         # output = model.generate(**tokenized_inputs, max_length=2000, pad_token_id=tokenizer.pad_token_id)
-            #         output = model.generate(**tokenized_inputs, max_length=2000, num_return_sequences=1, pad_token_id=tokenizer.pad_token_id, do_sample=True, temperature=t, top_p=p)
-            #         # output = model.generate(**tokenized_inputs, max_new_tokens=256, num_return_sequences=1, pad_token_id=tokenizer.pad_token_id, do_sample=True, temperature=0.1, top_p=0.95)
+                with torch.no_grad():
+                    # output = model.generate(**tokenized_inputs, max_length=2000, pad_token_id=tokenizer.pad_token_id)
+                    output = model.generate(**tokenized_inputs, max_length=2000, num_return_sequences=1, pad_token_id=tokenizer.pad_token_id, do_sample=True, temperature=t, top_p=p)
+                    # output = model.generate(**tokenized_inputs, max_new_tokens=256, num_return_sequences=1, pad_token_id=tokenizer.pad_token_id, do_sample=True, temperature=0.1, top_p=0.95)
             
-            #     for j, o in enumerate(output):
-            #         generated_text = tokenizer.decode(o, skip_special_tokens=True)
-            #         answer = generated_text.split("A: assistant")[-1]
-            #         generated_outputs.append({"input": inputs[j], "output": generated_text, "question": batch_questions[j], "answer":answer})
-            #         # generated_outputs.append({"input": inputs[j], "output": generated_text})
+                for j, o in enumerate(output):
+                    generated_text = tokenizer.decode(o, skip_special_tokens=True)
+                    answer = generated_text.split("A: assistant")[-1]
+                    generated_outputs.append({"input": inputs[j], "output": generated_text, "question": batch_questions[j], "answer":answer})
+                    # generated_outputs.append({"input": inputs[j], "output": generated_text})
             output_file_name = f"../outputs/gsm8k/LLaMA1B/generated_outputs_val_hyptune_{t}_{p}.json" 
-            # with open(output_file_name, "w") as f:
-            #     json.dump(generated_outputs, f, indent=4)   
+            with open(output_file_name, "w") as f:
+                json.dump(generated_outputs, f, indent=4)   
             
             score = get_score(data_eval_path,output_file_name)
             exp_runs.append({'model':model_name,'temp':t,'top_p':p,'score':score})
