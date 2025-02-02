@@ -52,15 +52,8 @@ def get_score(data_path, output_path):
 def main():
     # data_test = load_from_disk("../datasets/gsm8k/test")
     data_path ="../datasets/gsm8k/test"
-    # model_output_path =  "../outputs/gsm8k/LLaMA1B/generated_outputs_test_best_hyper_param.json"
-    # model_output_path = "../outputs/gsm8k/LLaMA1B/generated_outputs_test_new_prompt_lm_eval_harness.json" 
-    # model_output_path = "../outputs/gsm8k/LLaMA3B/generated_outputs_test_new_prompt_lm_eval_harness.json" 
-    model_output_path = "../outputs/gsm8k/LLaMA1B/generated_outputs_test_with_regex_and_stop_words.json" 
+    model_output_path = "../outputs/gsm8k/LLaMA3B/generated_outputs_test_with_regex_and_stop_words_batch_size_64_prompt_len_3072.json"  
  
-
-    # model_output_path = '../outputs/gsm8k/LLaMA1B/generated_outputs_val_hyptune_0.3_0.95.json'
-    
-        
     score = get_score(data_path, model_output_path)
     print("The score of the model is: ",score)
 

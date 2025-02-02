@@ -81,10 +81,11 @@ model.eval()
 generated_outputs=[]
 # Adjust batch size according to your GPU memory capacity
 # With vram=80G, 1B - 64, 3B - 64, 8B - 32
-batch_size=64
+batch_size=1
 temp = 0.0
 top_p = 0
 top_k = 0
+max_prompt_len = 3072
 for i in tqdm(range(0, len(data_test["question"]), batch_size), desc="Processing questions"):
     batch_questions = data_test["question"][i:i+batch_size]
     inputs = []
@@ -100,7 +101,8 @@ for i in tqdm(range(0, len(data_test["question"]), batch_size), desc="Processing
 
     # inputs = [fewShotPrompt+"Now, solve the below question following the instructions given above. \n\nQ: "+q+"\nA: <|eot_id|><|start_header_id|>assistant<|end_header_id|>" for q in batch_questions]
     # inputs = [fewShotPrompt+"Now, Follow the same format for reasoning and stating your final answer as above examples and Answer the below question\n\nQ: "+q+"<|eot_id|><|start_header_id|>assistant<|end_header_id|>" for q in batch_questions]
-    tokenized_inputs = tokenizer(inputs, return_tensors="pt", padding=True, truncation=True)
+    # tokenized_inputs = tokenizer(inputs, return_tensors="pt", padding=True, truncation=True)
+    tokenized_inputs = tokenizer(inputs, return_tensors="pt", padding='max_length', max_length=max_prompt_len)
     tokenized_inputs.to(device)
 
     with torch.no_grad():
@@ -110,13 +112,14 @@ for i in tqdm(range(0, len(data_test["question"]), batch_size), desc="Processing
    
     for j, o in enumerate(output):
         generated_text = tokenizer.decode(o, skip_special_tokens=True)
-        answer = generated_text.split("Your response should end with '#### [answer]' where [answer] is the response to the problem.assistant")[-1]
+        answer = generated_text.split("Your response should end with \'The final answer is [answer]\' where [answer] is the response to the problem.assistant")[-1]
         generated_outputs.append({"input": inputs[j], "output": generated_text, "question": batch_questions[j], "answer":answer})
+        
         # generated_outputs.append({"input": inputs[j], "output": generated_text})
 
-output_file_name = f"../outputs/gsm8k/LLaMA1B/generated_outputs_test_new_prompt_lm_eval_harness_with_max_new_len_1024_{temp}_{top_p}_{top_k}.json" 
+output_file_name = f"../outputs/gsm8k/LLaMA1B/generated_outputs_test_with_regex_and_stop_words_batch_size_{batch_size}_prompt_len_{max_prompt_len}.json" 
 with open(output_file_name, "w") as f:
     json.dump(generated_outputs, f, indent=4)
-
+    
 score = get_score(data_eval_path,output_file_name)
 print("SCORE of LLaMA 1B Model is: ",score)
