@@ -1,0 +1,57 @@
+gpu026
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.50s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:08<00:00,  3.81s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:08<00:00,  4.22s/it]
+Processing questions:   0%|          | 0/21 [00:00<?, ?it/s]/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:590: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:595: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+Processing questions:   0%|          | 0/21 [00:16<?, ?it/s]
+Traceback (most recent call last):
+  File "/scratch3/workspace/wenlongzhao_umass_edu-reason/dev_kedar/Bidirectional-Teacher-Student-Communication-for-LLM-Alignment/kchimmad/inference3B.py", line 112, in <module>
+    output = model.generate(**tokenized_inputs, max_length = max_length,pad_token_id=tokenizer.pad_token_id,do_sample=False, stop_strings = stop_strings, tokenizer = tokenizer)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/transformers/generation/utils.py", line 2215, in generate
+    result = self._sample(
+             ^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/transformers/generation/utils.py", line 3206, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 1190, in forward
+    outputs = self.model(
+              ^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 945, in forward
+    layer_outputs = decoder_layer(
+                    ^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 692, in forward
+    hidden_states = self.mlp(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 258, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.35 GiB. GPU 0 has a total capacity of 44.52 GiB of which 1.99 GiB is free. Including non-PyTorch memory, this process has 42.52 GiB memory in use. Of the allocated memory 35.94 GiB is allocated by PyTorch, and 6.09 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

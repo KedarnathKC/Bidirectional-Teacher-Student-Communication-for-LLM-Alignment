@@ -31,12 +31,12 @@ def get_score(data_path, output_path):
     df['model_answer'] = df.apply(get_answer_model,axis=1)
     test['GT_Answer'] = test.apply(get_answer_dataset, axis=1)
     # print(f'DF Shape: {df.shape}, Test Shape: {test.shape}')
-    # exact_match_metric = load("exact_match")
+    exact_match_metric = load("exact_match")
     
-    df['score'] = (df['model_answer'] == test['GT_Answer']).astype(int)
-    # # for i in tqdm(range(df.shape[0])):
-    # for i in range(df.shape[0]):
-    #     df.loc[i,'score'] = exact_match_metric.compute(predictions = [df.iloc[i]['model_answer']], references = [test.iloc[i]['GT_Answer']])['exact_match']
+    # df['score'] = (df['model_answer'] == test['GT_Answer']).astype(int)
+    # for i in tqdm(range(df.shape[0])):
+    for i in range(df.shape[0]):
+        df.loc[i,'score'] = exact_match_metric.compute(predictions = [df.iloc[i]['model_answer']], references = [test.iloc[i]['GT_Answer']])['exact_match']
     
     # df.drop(columns=['model_answer'], inplace=True)
     score = df['score'].sum()/df.shape[0]
@@ -52,15 +52,8 @@ def get_score(data_path, output_path):
 def main():
     # data_test = load_from_disk("../datasets/gsm8k/test")
     data_path ="../datasets/gsm8k/test"
-    # model_output_path =  "../outputs/gsm8k/LLaMA1B/generated_outputs_test_best_hyper_param.json"
-    # model_output_path = "../outputs/gsm8k/LLaMA1B/generated_outputs_test_new_prompt_lm_eval_harness.json" 
-    # model_output_path = "../outputs/gsm8k/LLaMA3B/generated_outputs_test_new_prompt_lm_eval_harness.json" 
-    model_output_path = "../outputs/gsm8k/LLaMA1B/generated_outputs_test_with_regex_and_stop_words.json" 
- 
+    model_output_path = f"../outputs/gsm8k/LLaMA1B/generated_outputs_full_precision.json" 
 
-    # model_output_path = '../outputs/gsm8k/LLaMA1B/generated_outputs_val_hyptune_0.3_0.95.json'
-    
-        
     score = get_score(data_path, model_output_path)
     print("The score of the model is: ",score)
 

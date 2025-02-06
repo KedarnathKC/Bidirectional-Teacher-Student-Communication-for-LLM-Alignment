@@ -1,0 +1,21 @@
+gpu030
+Processing questions:   0%|          | 0/21 [00:00<?, ?it/s]/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:590: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:595: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+Processing questions:   5%|▍         | 1/21 [00:12<04:12, 12.64s/it]Processing questions:  10%|▉         | 2/21 [00:46<08:00, 25.29s/it]Processing questions:  14%|█▍        | 3/21 [01:21<08:49, 29.44s/it]Processing questions:  19%|█▉        | 4/21 [01:34<06:31, 23.04s/it]Processing questions:  24%|██▍       | 5/21 [01:46<05:06, 19.17s/it]Processing questions:  29%|██▊       | 6/21 [01:58<04:09, 16.60s/it]Processing questions:  33%|███▎      | 7/21 [02:32<05:12, 22.29s/it]Processing questions:  38%|███▊      | 8/21 [02:45<04:13, 19.50s/it]Processing questions:  43%|████▎     | 9/21 [02:58<03:27, 17.28s/it]Processing questions:  48%|████▊     | 10/21 [03:32<04:07, 22.47s/it]Processing questions:  52%|█████▏    | 11/21 [03:44<03:12, 19.25s/it]Processing questions:  57%|█████▋    | 12/21 [03:54<02:29, 16.62s/it]Processing questions:  62%|██████▏   | 13/21 [04:14<02:21, 17.64s/it]Processing questions:  67%|██████▋   | 14/21 [04:31<02:01, 17.41s/it]Processing questions:  71%|███████▏  | 15/21 [04:45<01:37, 16.18s/it]Processing questions:  76%|███████▌  | 16/21 [05:19<01:48, 21.68s/it]Processing questions:  81%|████████  | 17/21 [05:33<01:17, 19.49s/it]Processing questions:  86%|████████▌ | 18/21 [06:07<01:11, 23.82s/it]Processing questions:  90%|█████████ | 19/21 [06:42<00:54, 27.17s/it]Processing questions:  95%|█████████▌| 20/21 [07:00<00:24, 24.46s/it]Processing questions: 100%|██████████| 21/21 [07:08<00:00, 19.53s/it]Processing questions: 100%|██████████| 21/21 [07:08<00:00, 20.43s/it]
+Traceback (most recent call last):
+  File "/scratch3/workspace/wenlongzhao_umass_edu-reason/dev_kedar/Bidirectional-Teacher-Student-Communication-for-LLM-Alignment/kchimmad/inf1B.py", line 117, in <module>
+    score = get_score(data_eval_path,output_file_name)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch3/workspace/wenlongzhao_umass_edu-reason/dev_kedar/Bidirectional-Teacher-Student-Communication-for-LLM-Alignment/kchimmad/score_preds.py", line 39, in get_score
+    df.loc[i,'score'] = exact_match_metric.compute(predictions = [df.iloc[i]['model_answer']], references = [test.iloc[i]['GT_Answer']])['exact_match']
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/evaluate/module.py", line 455, in compute
+    self.add_batch(**inputs)
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/lib/python3.12/site-packages/evaluate/module.py", line 546, in add_batch
+    raise ValueError(error_msg) from None
+ValueError: Predictions and/or references don't match the expected format.
+Expected format: {'predictions': Value(dtype='string', id='sequence'), 'references': Value(dtype='string', id='sequence')},
+Input predictions: [None],
+Input references: ['4']

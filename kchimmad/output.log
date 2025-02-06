@@ -1,0 +1,105 @@
+2025-02-03:18:52:27,415 INFO     [__main__.py:284] Verbosity set to INFO
+2025-02-03:18:52:27,523 INFO     [__init__.py:459] The tag 'kobest' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-02-03:18:52:27,526 INFO     [__init__.py:459] The tag 'kobest' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-02-03:18:52:27,528 INFO     [__init__.py:459] The tag 'kobest' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-02-03:18:52:27,531 INFO     [__init__.py:459] The tag 'kobest' is already registered as a group, this tag will not be registered. This may affect tasks you want to call.
+2025-02-03:18:52:39,467 INFO     [__main__.py:381] Selected Tasks: ['gsm8k_cot_llama']
+2025-02-03:18:52:39,472 INFO     [evaluator.py:165] Setting random seed to 42 | Setting numpy seed to 42 | Setting torch manual seed to 42 | Setting fewshot manual seed to 42
+2025-02-03:18:52:39,472 INFO     [evaluator.py:202] Initializing hf model, with arguments: {'pretrained': 'meta-llama/Llama-3.2-1B-Instruct', 'token': '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', 'cache_dir': '/scratch3/workspace/wenlongzhao_umass_edu-reason/dev_kedar/Bidirectional-Teacher-Student-Communication-for-LLM-Alignment/transformers_cache', 'dtype': 'bfloat16'}
+2025-02-03:18:52:39,682 INFO     [huggingface.py:135] Using device 'cuda:0'
+2025-02-03:18:52:40,323 INFO     [huggingface.py:375] Model parallel was set to False, max memory was not set, and device map was set to {'': 'cuda:0'}
+2025-02-03:18:52:43,786 WARNING  [evaluator.py:271] Overwriting default num_fewshot of gsm8k_cot_llama from 8 to 8
+2025-02-03:18:52:43,787 WARNING  [evaluator.py:417] Chat template formatting change affects loglikelihood and multiple-choice tasks. See docs/chat-template-readme.md for details.
+2025-02-03:18:52:43,787 INFO     [task.py:420] Building contexts for gsm8k_cot_llama on rank 0...
+System Instruction sent to build_all_requests: None
+  0%|          | 0/1319 [00:00<?, ?it/s]  0%|          | 0/1319 [00:00<?, ?it/s]
+Entered func fewshot_context ConfigurableTask Class
+system Instruction: None
+description: 
+System Prompt: 
+Labeled Examples after system_prompt: []
+Labeled examples after appening all examples: [{'role': 'user', 'content': 'Given the following problem, reason and give a final answer to the problem.\nProblem: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the grove workers plant today?\nYour response should end with "The final answer is [answer]" where [answer] is the response to the problem.\n'}, {'role': 'assistant', 'content': 'There are 15 trees originally. Then there were 21 trees after some more were planted. So there must have been 21 - 15 = 6. The final answer is 6'}, {'role': 'user', 'content': 'Given the following problem, reason and give a final answer to the problem.\nProblem: If there are 3 cars in the parking lot and 2 more cars arrive, how many cars are in the parking lot?\nYour response should end with "The final answer is [answer]" where [answer] is the response to the problem.\n'}, {'role': 'assistant', 'content': 'There are originally 3 cars. 2 more cars arrive. 3 + 2 = 5. The final answer is 5'}, {'role': 'user', 'content': 'Given the following problem, reason and give a final answer to the problem.\nProblem: Leah had 32 chocolates and her sister had 42. If they ate 35, how many pieces do they have left in total?\nYour response should end with "The final answer is [answer]" where [answer] is the response to the problem.\n'}, {'role': 'assistant', 'content': 'Originally, Leah had 32 chocolates. Her sister had 42. So in total they had 32 + 42 = 74. After eating 35, they had 74 - 35 = 39. The final answer is 39'}, {'role': 'user', 'content': 'Given the following problem, reason and give a final answer to the problem.\nProblem: Jason had 20 lollipops. He gave Denny some lollipops. Now Jason has 12 lollipops. How many lollipops did Jason give to Denny?\nYour response should end with "The final answer is [answer]" where [answer] is the response to the problem.\n'}, {'role': 'assistant', 'content': 'Jason started with 20 lollipops. Then he had 12 after giving some to Denny. So he gave Denny 20 - 12 = 8. The final answer is 8'}, {'role': 'user', 'content': 'Given the following problem, reason and give a final answer to the problem.\nProblem: Shawn has five toys. For Christmas, he got two toys each from his mom and dad. How many toys does he have now?\nYour response should end with "The final answer is [answer]" where [answer] is the response to the problem.\n'}, {'role': 'assistant', 'content': 'Shawn started with 5 toys. If he got 2 toys each from his mom and dad, then that is 4 more toys. 5 + 4 = 9. The final answer is 9'}, {'role': 'user', 'content': 'Given the following problem, reason and give a final answer to the problem.\nProblem: There were nine computers in the server room. Five more computers were installed each day, from monday to thursday. How many computers are now in the server room?\nYour response should end with "The final answer is [answer]" where [answer] is the response to the problem.\n'}, {'role': 'assistant', 'content': 'There were originally 9 computers. For each of 4 days, 5 more computers were added. So 5 * 4 = 20 computers were added. 9 + 20 is 29. The final answer is 29'}, {'role': 'user', 'content': 'Given the following problem, reason and give a final answer to the problem.\nProblem: Michael had 58 golf balls. On tuesday, he lost 23 golf balls. On wednesday, he lost 2 more. How many golf balls did he have at the end of wednesday?\nYour response should end with "The final answer is [answer]" where [answer] is the response to the problem.\n'}, {'role': 'assistant', 'content': 'Michael started with 58 golf balls. After losing 23 on tuesday, he had 58 - 23 = 35. After losing 2 more, he had 35 - 2 = 33 golf balls. The final answer is 33'}, {'role': 'user', 'content': 'Given the following problem, reason and give a final answer to the problem.\nProblem: Olivia has $23. She bought five bagels for $3 each. How much money does she have left?\nYour response should end with "The final answer is [answer]" where [answer] is the response to the problem.\n'}, {'role': 'assistant', 'content': 'Olivia had 23 dollars. 5 bagels for 3 dollars each will be 5 x 3 = 15 dollars. So she has 23 - 15 dollars left. 23 - 15 is 8. The final answer is 8'}]
+Entered if
+generation_prefix: None
+labeled examples before sending to chat_template: [{'role': 'user', 'content': 'Given the following problem, reason and give a final answer to the problem.\nProblem: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the grove workers plant today?\nYour response should end with "The final answer is [answer]" where [answer] is the response to the problem.\n'}, {'role': 'assistant', 'content': 'There are 15 trees originally. Then there were 21 trees after some more were planted. So there must have been 21 - 15 = 6. The final answer is 6'}, {'role': 'user', 'content': 'Given the following problem, reason and give a final answer to the problem.\nProblem: If there are 3 cars in the parking lot and 2 more cars arrive, how many cars are in the parking lot?\nYour response should end with "The final answer is [answer]" where [answer] is the response to the problem.\n'}, {'role': 'assistant', 'content': 'There are originally 3 cars. 2 more cars arrive. 3 + 2 = 5. The final answer is 5'}, {'role': 'user', 'content': 'Given the following problem, reason and give a final answer to the problem.\nProblem: Leah had 32 chocolates and her sister had 42. If they ate 35, how many pieces do they have left in total?\nYour response should end with "The final answer is [answer]" where [answer] is the response to the problem.\n'}, {'role': 'assistant', 'content': 'Originally, Leah had 32 chocolates. Her sister had 42. So in total they had 32 + 42 = 74. After eating 35, they had 74 - 35 = 39. The final answer is 39'}, {'role': 'user', 'content': 'Given the following problem, reason and give a final answer to the problem.\nProblem: Jason had 20 lollipops. He gave Denny some lollipops. Now Jason has 12 lollipops. How many lollipops did Jason give to Denny?\nYour response should end with "The final answer is [answer]" where [answer] is the response to the problem.\n'}, {'role': 'assistant', 'content': 'Jason started with 20 lollipops. Then he had 12 after giving some to Denny. So he gave Denny 20 - 12 = 8. The final answer is 8'}, {'role': 'user', 'content': 'Given the following problem, reason and give a final answer to the problem.\nProblem: Shawn has five toys. For Christmas, he got two toys each from his mom and dad. How many toys does he have now?\nYour response should end with "The final answer is [answer]" where [answer] is the response to the problem.\n'}, {'role': 'assistant', 'content': 'Shawn started with 5 toys. If he got 2 toys each from his mom and dad, then that is 4 more toys. 5 + 4 = 9. The final answer is 9'}, {'role': 'user', 'content': 'Given the following problem, reason and give a final answer to the problem.\nProblem: There were nine computers in the server room. Five more computers were installed each day, from monday to thursday. How many computers are now in the server room?\nYour response should end with "The final answer is [answer]" where [answer] is the response to the problem.\n'}, {'role': 'assistant', 'content': 'There were originally 9 computers. For each of 4 days, 5 more computers were added. So 5 * 4 = 20 computers were added. 9 + 20 is 29. The final answer is 29'}, {'role': 'user', 'content': 'Given the following problem, reason and give a final answer to the problem.\nProblem: Michael had 58 golf balls. On tuesday, he lost 23 golf balls. On wednesday, he lost 2 more. How many golf balls did he have at the end of wednesday?\nYour response should end with "The final answer is [answer]" where [answer] is the response to the problem.\n'}, {'role': 'assistant', 'content': 'Michael started with 58 golf balls. After losing 23 on tuesday, he had 58 - 23 = 35. After losing 2 more, he had 35 - 2 = 33 golf balls. The final answer is 33'}, {'role': 'user', 'content': 'Given the following problem, reason and give a final answer to the problem.\nProblem: Olivia has $23. She bought five bagels for $3 each. How much money does she have left?\nYour response should end with "The final answer is [answer]" where [answer] is the response to the problem.\n'}, {'role': 'assistant', 'content': 'Olivia had 23 dollars. 5 bagels for 3 dollars each will be 5 x 3 = 15 dollars. So she has 23 - 15 dollars left. 23 - 15 is 8. The final answer is 8'}, {'role': 'user', 'content': 'Given the following problem, reason and give a final answer to the problem.\nProblem: Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers\' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers\' market?\nYour response should end with "The final answer is [answer]" where [answer] is the response to the problem.\n'}]
+Fewshot_ctxs: <|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 03 Feb 2025
+
+<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Given the following problem, reason and give a final answer to the problem.
+Problem: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the grove workers plant today?
+Your response should end with "The final answer is [answer]" where [answer] is the response to the problem.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+There are 15 trees originally. Then there were 21 trees after some more were planted. So there must have been 21 - 15 = 6. The final answer is 6<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Given the following problem, reason and give a final answer to the problem.
+Problem: If there are 3 cars in the parking lot and 2 more cars arrive, how many cars are in the parking lot?
+Your response should end with "The final answer is [answer]" where [answer] is the response to the problem.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+There are originally 3 cars. 2 more cars arrive. 3 + 2 = 5. The final answer is 5<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Given the following problem, reason and give a final answer to the problem.
+Problem: Leah had 32 chocolates and her sister had 42. If they ate 35, how many pieces do they have left in total?
+Your response should end with "The final answer is [answer]" where [answer] is the response to the problem.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Originally, Leah had 32 chocolates. Her sister had 42. So in total they had 32 + 42 = 74. After eating 35, they had 74 - 35 = 39. The final answer is 39<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Given the following problem, reason and give a final answer to the problem.
+Problem: Jason had 20 lollipops. He gave Denny some lollipops. Now Jason has 12 lollipops. How many lollipops did Jason give to Denny?
+Your response should end with "The final answer is [answer]" where [answer] is the response to the problem.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Jason started with 20 lollipops. Then he had 12 after giving some to Denny. So he gave Denny 20 - 12 = 8. The final answer is 8<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Given the following problem, reason and give a final answer to the problem.
+Problem: Shawn has five toys. For Christmas, he got two toys each from his mom and dad. How many toys does he have now?
+Your response should end with "The final answer is [answer]" where [answer] is the response to the problem.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Shawn started with 5 toys. If he got 2 toys each from his mom and dad, then that is 4 more toys. 5 + 4 = 9. The final answer is 9<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Given the following problem, reason and give a final answer to the problem.
+Problem: There were nine computers in the server room. Five more computers were installed each day, from monday to thursday. How many computers are now in the server room?
+Your response should end with "The final answer is [answer]" where [answer] is the response to the problem.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+There were originally 9 computers. For each of 4 days, 5 more computers were added. So 5 * 4 = 20 computers were added. 9 + 20 is 29. The final answer is 29<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Given the following problem, reason and give a final answer to the problem.
+Problem: Michael had 58 golf balls. On tuesday, he lost 23 golf balls. On wednesday, he lost 2 more. How many golf balls did he have at the end of wednesday?
+Your response should end with "The final answer is [answer]" where [answer] is the response to the problem.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Michael started with 58 golf balls. After losing 23 on tuesday, he had 58 - 23 = 35. After losing 2 more, he had 35 - 2 = 33 golf balls. The final answer is 33<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Given the following problem, reason and give a final answer to the problem.
+Problem: Olivia has $23. She bought five bagels for $3 each. How much money does she have left?
+Your response should end with "The final answer is [answer]" where [answer] is the response to the problem.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+Olivia had 23 dollars. 5 bagels for 3 dollars each will be 5 x 3 = 15 dollars. So she has 23 - 15 dollars left. 23 - 15 is 8. The final answer is 8<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Given the following problem, reason and give a final answer to the problem.
+Problem: Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?
+Your response should end with "The final answer is [answer]" where [answer] is the response to the problem.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+
+Traceback (most recent call last):
+  File "/home/kchimmad_umass_edu/.conda/envs/IESLAnalyse/bin/lm_eval", line 8, in <module>
+    sys.exit(cli_evaluate())
+             ^^^^^^^^^^^^^^
+  File "/scratch3/workspace/wenlongzhao_umass_edu-reason/dev_kedar/lm-evaluation-harness/lm_eval/__main__.py", line 387, in cli_evaluate
+    results = evaluator.simple_evaluate(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch3/workspace/wenlongzhao_umass_edu-reason/dev_kedar/lm-evaluation-harness/lm_eval/utils.py", line 402, in _wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/scratch3/workspace/wenlongzhao_umass_edu-reason/dev_kedar/lm-evaluation-harness/lm_eval/evaluator.py", line 304, in simple_evaluate
+    results = evaluate(
+              ^^^^^^^^^
+  File "/scratch3/workspace/wenlongzhao_umass_edu-reason/dev_kedar/lm-evaluation-harness/lm_eval/utils.py", line 402, in _wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/scratch3/workspace/wenlongzhao_umass_edu-reason/dev_kedar/lm-evaluation-harness/lm_eval/evaluator.py", line 470, in evaluate
+    task.build_all_requests(
+  File "/scratch3/workspace/wenlongzhao_umass_edu-reason/dev_kedar/lm-evaluation-harness/lm_eval/api/task.py", line 455, in build_all_requests
+    kedar
+NameError: name 'kedar' is not defined
