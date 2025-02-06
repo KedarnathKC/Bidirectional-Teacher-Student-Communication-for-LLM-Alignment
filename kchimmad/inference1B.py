@@ -99,14 +99,11 @@ model.eval()
 generated_outputs=[]
 # Adjust batch size according to your GPU memory capacity
 # With vram=80G, 1B - 64, 3B - 64, 8B - 32
-batch_size=64
+batch_size=1
 temp = 0.0
 top_p = 0
 top_k = 0
-stop_strings = ['<|eot_id|>', '<|start_header_id|>user<|end_header_id|>','Q:', '</s>','<|im_end|>']
-
-# max_prompt_len = 3072
-max_gen_toks = 256
+max_prompt_len = 3072
 for i in tqdm(range(0, len(data_test["question"]), batch_size), desc="Processing questions"):
     batch_questions = data_test["question"][i:i+batch_size]
     inputs = []
@@ -123,7 +120,7 @@ for i in tqdm(range(0, len(data_test["question"]), batch_size), desc="Processing
     # inputs = [fewShotPrompt+"Now, solve the below question following the instructions given above. \n\nQ: "+q+"\nA: <|eot_id|><|start_header_id|>assistant<|end_header_id|>" for q in batch_questions]
     # inputs = [fewShotPrompt+"Now, Follow the same format for reasoning and stating your final answer as above examples and Answer the below question\n\nQ: "+q+"<|eot_id|><|start_header_id|>assistant<|end_header_id|>" for q in batch_questions]
     # tokenized_inputs = tokenizer(inputs, return_tensors="pt", padding=True, truncation=True)
-    tokenized_inputs = tokenizer(inputs, return_tensors="pt", padding='longest',  **add_special_tokens)
+    tokenized_inputs = tokenizer(inputs, return_tensors="pt", padding='max_length', max_length=max_prompt_len)
     tokenized_inputs.to(device)
     with torch.no_grad():
         max_length=tokenized_inputs['input_ids'].shape[1] + max_gen_toks
@@ -138,7 +135,7 @@ for i in tqdm(range(0, len(data_test["question"]), batch_size), desc="Processing
         
         # generated_outputs.append({"input": inputs[j], "output": generated_text})
 
-output_file_name = f"../outputs/gsm8k/LLaMA1B/generated_outputs_test_with_regex_and_stop_words_withoout_bos_without_bfloat16.json" 
+output_file_name = f"../outputs/gsm8k/LLaMA1B/generated_outputs_test_with_regex_and_stop_words_batch_size_{batch_size}_prompt_len_{max_prompt_len}.json" 
 with open(output_file_name, "w") as f:
     json.dump(generated_outputs, f, indent=4)
     
